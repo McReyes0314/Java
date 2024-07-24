@@ -1,10 +1,21 @@
 public class Student {
-    public static void main(String[] args) {
-        MyStudent s1 = new MyStudent();
-        int studentAge = s1.age;
-        System.out.println("Before student Age: " + studentAge);
-        s1.alterAge(19);
-        studentAge = s1.GetAge();
-        System.out.println("Now student age: " + studentAge);
+    static int schoolcode = 357; //class variable
+
+    int studnum; //instance variable 
+
+    public void throwstudnum(int x){ //instance method
+        studnum = x; 
+    }
+
+    public int fetchstdnum(){ //instance method 
+        return studnum;
+    }
+
+    public int fetchschoolcode(){ //instance method
+        return schoolcode;
+    }
+ 
+    public void changeschoolcode(int y){ //class method
+        schoolcode = y;
     }
 }

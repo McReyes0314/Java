@@ -1,19 +1,33 @@
-public class Employee {
-    String id, name; 
-
-    public void setId(String i){
-        id = i;
+class Employee{
+    String lname, fname, job;
+    int age; 
+    
+    public void setName(String ln, String fn){
+        lname = ln;
+        fname = fn; 
     }
 
-    public String getId(){
-        return id;
+    public String getLname(){
+        return lname;
     }
 
-    public void setName(String nam){
-        name = nam; 
+    public String getFname(){
+        return fname;
     }
 
-    public String getName(){
-        return name;
+    public void setJob(String j){
+        job = j; 
+    }
+
+    public String getJob(){
+        return job;
+    }
+
+    public void setAge(int a){
+        age = a; 
+    }
+
+    public int getAge(){
+        return age;
     }
 }
