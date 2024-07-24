@@ -1,8 +1,9 @@
-package Sample;
+import javax.swing.JFrame;
 
-class Main{
+public class Main {
     public static void main(String[] args) {
-        Animal b = new Dog();
-        b.makeSound();
+        jFrame t1 = new jFrame("Jframe");
+        t1.setVisible(true);
+        t1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 }
