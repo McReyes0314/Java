@@ -1,15 +1,16 @@
-public class Circle {
-    double radius;
-    double diameter = 2; 
-    double area = 3.14;
-
-    public void setRadius(double rad){
-        radius = rad;
+class Circle{
+    double radius, area = 3.14, diameter = 2; 
+    Circle(){
+        radius = 1;
     }
 
-    public double getRadius(){
+    public void setRad(double radius){
+        this.radius = radius;
+    }
+
+    public double getRad(){
         return radius;
-    } 
+    }
 
     public double computeDiameter(double rad){
         diameter *= rad;
