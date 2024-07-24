@@ -1,24 +1,30 @@
-//Sort the numbers in ascending order
+/**
+ * Write a program that inputs the hourly rate and  number of hours worked.
+ * Compute and display the gross pay (hourly rate * hours worked), 
+ * your withholding tax, which is 15% of your gross pay and your net pay (gross pay – withholding tax).  
+ */
+import java.util.*;
+
+/**
+ * Lab4
+ */
 public class Lab4 {
-    public static void sort(int[] n){
-       int temp = 0;
-       for(int i = 0; i < n.length; i++){
-         for(int j = i + 1; j < n.length; j++){
-            if(n[i] > n[j]){
-               temp = n[i];
-               n[i] = n[j];
-               n[j] = temp;
-            }
-         }
-       }
-      
-       for(int i = 0; i < n.length; i++){
-         System.out.print(n[i] + " ");
-       }
-     
-    }
     public static void main(String[] args) {
-        int[] n = {33, 2, 70, 4, 52, 42, 8, 35, 9, 211}; 
-        sort(n);
-    }
-}
+        Scanner sc = new Scanner(System.in);
+        double hourlyRate, grossPay, withHoldingTax;
+        int hoursWorked;  
+
+        System.out.print("Hours rate: ");
+        hourlyRate = sc.nextDouble();
+
+        System.out.print("Hours worked: ");
+        hoursWorked = sc.nextInt();
+
+        System.out.print("Gross Pay: ");
+        grossPay = sc.nextDouble();
+
+        System.out.println("Withholding tax: " + (withHoldingTax = grossPay * 0.15));
+        
+        System.out.format("Net Pay: %.3f", (grossPay - withHoldingTax));
+    }  
+} 

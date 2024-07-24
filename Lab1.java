@@ -1,34 +1,30 @@
-//Separate all odd from even numbers
-public class Lab1 {
-   public static void oddOrEven(int[] n){
-       System.out.print("Array elements: ");
-       int i; 
+import java.util.*;
 
-       for(i = 0; i < n.length; i++){
-          System.out.print(n[i] + " ");
-       }
+class Lab1{
+    public static int input(){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        return n;
+    }
 
-       System.out.println();
-       
-       System.out.print("Even Numbers: ");
-       for(i = 0; i < n.length; i++){
-         if(n[i] % 2 == 0){
-            System.out.print(n[i] + " ");
-         }
-       }
+    public static void numberPattern(int n){
+        int r, c; 
 
-       System.out.println();
+        //loop for row
+        for(r = 1; r <= n; r++){
+            //loop to handles number
+           for(c = 1; c <= r; c++){
+                System.out.print(c + " ");
+           }
+           //print new lines for row
+           System.out.println();
+        }
 
-       System.out.print("Odd Numbers: ");
-       for(i = 0; i < n.length; i++){
-         if(n[i] % 2 != 0){
-            System.out.print(n[i] + " ");
-         }
-       }
-   }
-   
-   public static void main(String[] args) {
-        int[] n = {33, 2, 70, 4, 52, 42, 8, 35, 9, 211};
-        oddOrEven(n);
-   }
+    }
+
+    public static void main(String[] args) {
+        System.out.print("Input a number: ");
+        int n = input();
+        numberPattern(n);
+    }
 }
